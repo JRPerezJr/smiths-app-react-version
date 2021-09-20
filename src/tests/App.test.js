@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 // import { mount } from 'enzyme';
 
-import App from './App';
+import App from '../App';
 
 describe('App component tests', () => {
   it('Sanity test for App component', () => {

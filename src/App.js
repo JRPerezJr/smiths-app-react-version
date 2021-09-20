@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
+
+import ThemeSwitch from './components/theme-switch/theme-switch';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to The Smiths Player</h1>
-    </div>
+    <>
+      <ThemeSwitch />
+    </>
   );
 }
 

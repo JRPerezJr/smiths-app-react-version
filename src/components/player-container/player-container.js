@@ -9,6 +9,7 @@ import {
 
 import QueenIsDeadAudio from '../../music/The Queen Is Dead/01-TheSmiths-TheQueenIsDead.mp3';
 import ProgressBar from '../progress-bar/progress-bar';
+import PlayerControls from '../player-controls/player-controls';
 
 const PlayerContainerComponent = () => {
   return (
@@ -21,6 +22,7 @@ const PlayerContainerComponent = () => {
       {/* Progress */}
       <ProgressBar />
       {/* Controls */}
+      <PlayerControls />
     </StyledPlayerContainer>
   );
 };

@@ -4,29 +4,19 @@ import {
   faPause,
   faPlay,
 } from '@fortawesome/free-solid-svg-icons';
-import React, { useState } from 'react';
+
 import {
   PlayerControlsContainer,
   StyledIcon,
   StyledPlayPauseIcon,
 } from './player-controls.styles';
 
-const PlayerControls = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const playSong = () => {
-    setIsPlaying(true);
-    console.log('playing');
-  };
-
-  const pauseSong = () => {
-    setIsPlaying(false);
-    console.log('paused');
-  };
+const PlayerControls = props => {
+  const { isPlaying, playSong, pauseSong, prevSong, nextSong } = props;
 
   return (
     <PlayerControlsContainer>
-      <StyledIcon icon={faBackward} title="Previous" />
+      <StyledIcon icon={faBackward} title="Previous" onClick={prevSong} />
       {!isPlaying ? (
         <StyledPlayPauseIcon
           icon={faPlay}
@@ -40,7 +30,7 @@ const PlayerControls = () => {
           onClick={isPlaying ? pauseSong : playSong}
         />
       )}
-      <StyledIcon icon={faForward} title="Next" />
+      <StyledIcon icon={faForward} title="Next" onClick={nextSong} />
     </PlayerControlsContainer>
   );
 };

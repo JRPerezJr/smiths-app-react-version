@@ -31,7 +31,8 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-/src/music
+/public/music
+/public/assets
 
 # dotenv environment variables file
 .env.local

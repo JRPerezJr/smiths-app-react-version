@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
 export const PlayerControlsContainer = styled.div`
   position: relative;
@@ -22,10 +21,7 @@ export const StyledIcon = styled(FontAwesomeIcon)`
   user-select: none;
 `;
 
-export const StyledPlayIcon = styled(FontAwesomeIcon).attrs({
-  icon: faPlay,
-  title: 'Play',
-})`
+export const StyledPlayPauseIcon = styled(FontAwesomeIcon)`
   font-size: 40px;
   position: relative;
   top: 3px;

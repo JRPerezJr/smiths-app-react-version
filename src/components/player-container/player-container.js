@@ -8,6 +8,7 @@ import {
 } from './player-container.styles';
 
 import QueenIsDeadAudio from '../../music/The Queen Is Dead/01-TheSmiths-TheQueenIsDead.mp3';
+import ProgressBar from '../progress-bar/progress-bar';
 
 const PlayerContainerComponent = () => {
   return (
@@ -18,6 +19,8 @@ const PlayerContainerComponent = () => {
       <StyledArtist>The Smiths</StyledArtist>
       <audio src={QueenIsDeadAudio} />
       {/* Progress */}
+      <ProgressBar />
+      {/* Controls */}
     </StyledPlayerContainer>
   );
 };

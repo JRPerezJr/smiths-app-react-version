@@ -1,4 +1,4 @@
-<h1 align="center">Smiths Player Electron</h1>
+<h1 align="center">Smiths Player React</h1>
 
 ![smiths](https://user-images.githubusercontent.com/19915910/131281339-d4b3f7ec-e5f8-4b80-8d41-3e45c84bd0ec.gif)
 

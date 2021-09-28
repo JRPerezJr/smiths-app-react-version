@@ -18,7 +18,7 @@ const TRACKS = [
     title: "I Know It's Over",
     album: 'The Queen Is Dead',
     albumArtUrl: `${process.env.PUBLIC_URL}/assets/the_queen_is_dead.jpg`,
-    audioUrl: `${process.env.PUBLIC_URL}/music/The Queen Is Dead/03-TheSmiths-IKnowItsOver`,
+    audioUrl: `${process.env.PUBLIC_URL}/music/The Queen Is Dead/03-TheSmiths-IKnowItsOver.mp3`,
   },
   {
     artist: 'The Smiths',

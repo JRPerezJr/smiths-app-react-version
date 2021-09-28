@@ -1,11 +1,15 @@
 import React from 'react';
-import './App.css';
+import PlayerContainerComponent from './components/player-container/player-container';
+
+import ThemeSwitch from './components/theme-switch/theme-switch';
+import TRACKS from './data/music.data';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to The Smiths Player</h1>
-    </div>
+    <>
+      <ThemeSwitch />
+      <PlayerContainerComponent tracks={TRACKS} />
+    </>
   );
 }
 

@@ -4,9 +4,12 @@ import {
   StyledImageContainer,
 } from './album-art-container.styles';
 
-const AlbumArtComponent = props => (
+const AlbumArtComponent = ({ albumCover, title, artist }) => (
   <StyledImageContainer>
-    <StyledImage src={props.albumCover} alt="queen is dead album cover" />
+    <StyledImage
+      src={albumCover}
+      alt={`track artwork for ${title} by ${artist}`}
+    />
   </StyledImageContainer>
 );
 export default AlbumArtComponent;

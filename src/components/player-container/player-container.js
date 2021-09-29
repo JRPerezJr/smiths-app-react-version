@@ -19,7 +19,7 @@ const PlayerContainerComponent = ({ tracks }) => {
   const [audioContext, setAudioContext] = useState(null);
   const [gainNode, setGainNode] = useState(null);
   const [panner, setPanner] = useState(null);
-  const [volumeInput, setVolumeInput] = useState(1);
+  const [volumeInput, setVolumeInput] = useState(0.5);
   const [pannerInput, setPannerInput] = useState(0);
   // const [trackProgress, setTrackProgress] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);

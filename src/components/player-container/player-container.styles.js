@@ -22,3 +22,13 @@ export const StyledArtist = styled.h3`
   margin: 5px 0 0;
   color: var(--primary-color);
 `;
+
+export const VolumeContainer = styled.input`
+  margin: 8px 114px;
+  cursor: pointer;
+`;
+
+export const PannerContainer = styled.input`
+  margin: 8px 114px;
+  cursor: pointer;
+`;

@@ -2,15 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 import AlbumArtComponent from '../album-art-container/album-art-container';
 import {
-  PannerContainer,
   StyledArtist,
   StyledPlayerContainer,
   StyledTitle,
-  VolumeContainer,
 } from './player-container.styles';
 
 import ProgressBar from '../progress-bar/progress-bar';
 import PlayerControls from '../player-controls/player-controls';
+import VolumeControls from '../volume-controls/volume-controls';
 
 const PlayerContainerComponent = ({ tracks }) => {
   // State
@@ -18,9 +17,9 @@ const PlayerContainerComponent = ({ tracks }) => {
   const [trackIndex, setTrackIndex] = useState(0);
   const [audioContext, setAudioContext] = useState(null);
   const [gainNode, setGainNode] = useState(null);
-  const [panner, setPanner] = useState(null);
+
   const [volumeInput, setVolumeInput] = useState(0.5);
-  const [pannerInput, setPannerInput] = useState(0);
+
   // const [trackProgress, setTrackProgress] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -31,9 +30,11 @@ const PlayerContainerComponent = ({ tracks }) => {
     trackIndex - 1 < 0
       ? setTrackIndex(tracks.length - 1)
       : setTrackIndex(trackIndex - 1);
-    setTimeout(() => {
-      audioElement.play();
-    }, 500);
+    if (isPlaying) {
+      setTimeout(() => {
+        audioElement.play();
+      }, 500);
+    }
   };
 
   const toNextTrack = () => {
@@ -42,9 +43,11 @@ const PlayerContainerComponent = ({ tracks }) => {
     if (trackIndex > tracks.length - 1) {
       setTrackIndex(0);
     }
-    setTimeout(() => {
-      audioElement.play();
-    }, 500);
+    if (isPlaying) {
+      setTimeout(() => {
+        audioElement.play();
+      }, 500);
+    }
   };
 
   const playTrack = val => {
@@ -78,11 +81,6 @@ const PlayerContainerComponent = ({ tracks }) => {
     setVolumeInput(e.target.value);
   };
 
-  const handlePanner = e => {
-    panner.pan.value = e.target.value;
-    setPannerInput(e.target.value);
-  };
-
   useEffect(() => {
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioContext = new AudioContext();
@@ -94,12 +92,8 @@ const PlayerContainerComponent = ({ tracks }) => {
     const gainNode = audioContext.createGain();
     setGainNode(gainNode);
 
-    const pannerOptions = { pan: 0 };
-    const panner = new StereoPannerNode(audioContext, pannerOptions);
-    setPanner(panner);
-
     const track = audioContext.createMediaElementSource(audioElement);
-    track.connect(gainNode).connect(panner).connect(audioContext.destination);
+    track.connect(gainNode).connect(audioContext.destination);
   }, []);
 
   return (
@@ -124,23 +118,8 @@ const PlayerContainerComponent = ({ tracks }) => {
         onNextClick={toNextTrack}
         onPlayPauseClick={playTrack}
       />
-      <VolumeContainer
-        type="range"
-        min="0"
-        max="2"
-        value={volumeInput}
-        step="0.01"
-        onInput={e => handleVolume(e)}
-      />
-      <PannerContainer
-        type="range"
-        id="panner"
-        min="-1"
-        max="1"
-        value={pannerInput}
-        step="0.01"
-        onInput={e => handlePanner(e)}
-      />
+      {/* Volume */}
+      <VolumeControls handleVolume={handleVolume} volumeInput={volumeInput} />
     </StyledPlayerContainer>
   );
 };

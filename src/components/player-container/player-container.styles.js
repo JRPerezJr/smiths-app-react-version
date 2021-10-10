@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledPlayerContainer = styled.div`
-  height: 600px;
+  height: 620px;
   width: 400px;
   background: var(--player-background);
   border-radius: 20px;
@@ -9,6 +9,7 @@ export const StyledPlayerContainer = styled.div`
 `;
 
 export const StyledTitle = styled.h2`
+  height: 100px;
   font-size: 25px;
   text-align: center;
   margin: 0;
@@ -21,14 +22,4 @@ export const StyledArtist = styled.h3`
   font-weight: 400;
   margin: 5px 0 0;
   color: var(--primary-color);
-`;
-
-export const VolumeContainer = styled.input`
-  margin: 8px 114px;
-  cursor: pointer;
-`;
-
-export const PannerContainer = styled.input`
-  margin: 8px 114px;
-  cursor: pointer;
 `;

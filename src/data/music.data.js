@@ -4,31 +4,31 @@ const artFolder = `${process.env.PUBLIC_URL}/assets/`;
 const TRACKS = [
   {
     artist: 'The Smiths',
+    audioUrl: `${musicFolder}The Queen Is Dead/01-TheSmiths-TheQueenIsDead.mp3`,
     title: 'The Queen Is Dead(Take Me Back To Dear Old Blightly Medley)',
     album: 'The Queen Is Dead',
     albumArtUrl: `${artFolder}the_queen_is_dead.jpg`,
-    audioUrl: `${musicFolder}The Queen Is Dead/01-TheSmiths-TheQueenIsDead.mp3`,
   },
   {
     artist: 'The Smiths',
+    audioUrl: `${musicFolder}The Queen Is Dead/02-The Smiths-FranklyMrShankly.mp3`,
     title: 'Frankly, Mr. Shankly',
     album: 'The Queen Is Dead',
     albumArtUrl: `${artFolder}the_queen_is_dead.jpg`,
-    audioUrl: `${musicFolder}The Queen Is Dead/02-The Smiths-FranklyMrShankly.mp3`,
   },
   {
     artist: 'The Smiths',
+    audioUrl: `${musicFolder}The Queen Is Dead/03-TheSmiths-IKnowItsOver.mp3`,
     title: "I Know It's Over",
     album: 'The Queen Is Dead',
     albumArtUrl: `${artFolder}the_queen_is_dead.jpg`,
-    audioUrl: `${musicFolder}The Queen Is Dead/03-TheSmiths-IKnowItsOver.mp3`,
   },
   {
     artist: 'The Smiths',
+    audioUrl: `${musicFolder}The Queen Is Dead/04-TheSmiths-NeverHadNoOneEver.mp3`,
     title: 'Never Had No One Ever',
     album: 'The Queen Is Dead',
     albumArtUrl: `${artFolder}the_queen_is_dead.jpg`,
-    audioUrl: `${musicFolder}The Queen Is Dead/04-TheSmiths-NeverHadNoOneEver.mp3`,
   },
   {
     artist: 'The Smiths',
@@ -305,7 +305,7 @@ const TRACKS = [
   },
   {
     artist: 'The Smiths',
-    audioUrl: `${musicFolder}Strangeways, Here We Come/01 - A Rush and a Push and the Land Is Ours`,
+    audioUrl: `${musicFolder}Strangeways, Here We Come/01 - A Rush and a Push and the Land Is Ours.mp3`,
     title: 'A Rush and a Push and the Land Is Ours',
     album: 'Strangeways, Here We Come',
     albumArtUrl: `${artFolder}strangeways_here_we_come.jpg`,

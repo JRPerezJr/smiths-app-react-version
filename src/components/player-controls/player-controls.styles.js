@@ -6,7 +6,7 @@ export const PlayerControlsContainer = styled.div`
   position: relative;
   top: -15px;
   left: 120px;
-  width: 200px;
+  width: 250px;
   @media screen and (max-width: 376px) {
     top: -10px;
     left: 100px;
@@ -16,6 +16,14 @@ export const PlayerControlsContainer = styled.div`
 export const StyledIcon = styled(FontAwesomeIcon)`
   font-size: 30px;
   color: var(--player-controls);
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+`;
+
+export const StyledHeartIcon = styled(FontAwesomeIcon)`
+  font-size: 30px;
+  color: var(--favorites);
   margin-right: 30px;
   cursor: pointer;
   user-select: none;

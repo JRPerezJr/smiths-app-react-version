@@ -117,6 +117,7 @@ const PlayerContainerComponent = ({ tracks }) => {
       <ProgressBar />
       {/* Controls */}
       <PlayerControls
+        track={tracks[trackIndex]}
         isPlaying={isPlaying}
         onPrevClick={toPrevTrack}
         onNextClick={toNextTrack}

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { Helmet } from 'react-helmet-async';
+
 import AlbumArtComponent from '../album-art-container/album-art-container';
 import {
   StyledArtist,
@@ -97,8 +99,11 @@ const PlayerContainerComponent = ({ tracks }) => {
 
   return (
     <StyledPlayerContainer>
-      {/* Song */}
+      <Helmet>
+        <title>{title} | The Smiths Player</title>
+      </Helmet>
 
+      {/* Song */}
       <AlbumArtComponent
         albumCover={albumArtUrl}
         title={title}

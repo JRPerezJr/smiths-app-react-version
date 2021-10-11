@@ -4,12 +4,15 @@ import PlayerContainerComponent from './components/player-container/player-conta
 
 import ThemeSwitch from './components/theme-switch/theme-switch';
 import TRACKS from './data/music.data';
+import { FavoritesContextProvider } from './services/favorites/favorites.context';
 
 function App() {
   return (
     <>
-      <ThemeSwitch />
-      <PlayerContainerComponent tracks={TRACKS} />
+      <FavoritesContextProvider>
+        <ThemeSwitch />
+        <PlayerContainerComponent tracks={TRACKS} />
+      </FavoritesContextProvider>
     </>
   );
 }

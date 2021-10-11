@@ -39,10 +39,10 @@ const PlayerContainerComponent = ({ tracks }) => {
 
   const toNextTrack = () => {
     setTrackIndex(trackIndex + 1);
-
-    if (trackIndex > tracks.length - 1) {
+    if (trackIndex >= tracks.length - 1) {
       setTrackIndex(0);
     }
+
     if (isPlaying) {
       setTimeout(() => {
         audioElement.play();
@@ -69,7 +69,6 @@ const PlayerContainerComponent = ({ tracks }) => {
       setIsPlaying(false);
       audioElement.pause();
     }
-    console.table(audioContext);
   };
 
   const onEndTrack = e => {

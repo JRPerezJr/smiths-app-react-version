@@ -9,6 +9,7 @@
   --progress-container: #fff;
   --progress-bar: #242323;
   --player-controls: rgb(129, 129, 129);
+  --favorites: #ff000096;
 }
 
 [data-theme='dark'] {
@@ -19,6 +20,7 @@
   --progress-container: #ffffff;
   --progress-bar: #45d4f7;
   --player-controls: #ffffff;
+  --favorites: red;
   --title: #06bcfa;
   --bmw-cluster-dark: #05a3e6;
 }

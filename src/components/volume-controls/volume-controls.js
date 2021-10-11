@@ -18,10 +18,6 @@ const VolumeControls = ({ handleVolume, volumeInput }) => (
       onInput={e => handleVolume(e)}
     />
     <StyledSpan>Max</StyledSpan>
-    {/* <VolumeWrapper>
-      <span>Min</span>
-      <span>Max</span>
-    </VolumeWrapper> */}
   </VolumeBarContainer>
 );
 

@@ -16,11 +16,3 @@ export const StyledSpan = styled.span`
   position: relative;
   top: 12px;
 `;
-
-export const VolumeWrapper = styled.div`
-  color: var(--primary-color);
-  position: relative;
-  top: -30px;
-  display: flex;
-  justify-content: space-between;
-`;

@@ -1,6 +1,6 @@
 <h1 align="center">Smiths Player React</h1>
 
-![smiths](https://user-images.githubusercontent.com/19915910/140844719-7039b789-6932-477f-8a80-cc9839171483.mp4)
+https://user-images.githubusercontent.com/19915910/140844719-7039b789-6932-477f-8a80-cc9839171483.mp4
 
 <br>
 
